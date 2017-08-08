@@ -443,7 +443,7 @@ public class BuildWithDetails extends Build {
      * @throws IOException in case of a failure.
      */
     public ConsoleLog getConsoleOutputText(int bufferOffset) throws IOException {
-        List<NameValuePair> formData = new ArrayList<>();
+        List<NameValuePair> formData = new ArrayList<NameValuePair>();
         formData.add(new BasicNameValuePair("start", Integer.toString(bufferOffset)));
         String path = getUrl() + "logText/progressiveText";
         HttpResponse httpResponse = client.post_form_with_result(path, formData, false);

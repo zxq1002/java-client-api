@@ -354,7 +354,7 @@ public class ComparableVersion
 
         ListItem list = items;
 
-        Stack<Item> stack = new Stack<>();
+        Stack<Item> stack = new Stack<Item>();
         stack.push( list );
 
         boolean isDigit = false;

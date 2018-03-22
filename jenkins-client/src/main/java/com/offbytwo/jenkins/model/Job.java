@@ -85,7 +85,7 @@ public class Job extends BaseModel {
      * @throws IOException in case of an error.
      */
     public QueueReference build() throws IOException {
-        ExtractHeader location = client.post(url + "build", null, ExtractHeader.class,null, false);
+        ExtractHeader location = client.post(url + "build", null, ExtractHeader.class, false);
         return new QueueReference(location.getLocation());
 
     }
@@ -98,7 +98,7 @@ public class Job extends BaseModel {
      * @throws IOException in case of an error.
      */
     public QueueReference build(boolean crumbFlag) throws IOException {
-        ExtractHeader location = client.post(url + "build", null, ExtractHeader.class, null, crumbFlag);
+        ExtractHeader location = client.post(url + "build", null, ExtractHeader.class, crumbFlag);
         return new QueueReference(location.getLocation());
     }
 
